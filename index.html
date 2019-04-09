@@ -6,17 +6,22 @@
   <h2>Luyện tập tạo và sử dụng hàm</h2>
 </head>
 <body>
+<button onclick="idol()">Bai5</button>
 <script>
-  function addNumbers() {
-      let firstNum = 4;
-      let secondNum = 8;
-      let result = firstNum + secondNum;
-      return result;
+  function idol() {
+      let name = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+      let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+      let name1 = prompt("Nhập tên một idol: ");
+      let a = 0;
+      for (let i = 0; i < name.length; i++) {
+          if (name1 === name[i]) {
+              document.getElementById('result').innerHTML = constellation[i];
+              a ++;
+          }
+      }
   }
-  result = 0;
-  alert(result);
-  result = addNumbers();
-  alert(result);
 </script>
+<p>Chóm sao tương ứng là:<span id="result"></span></p><br><br/>
+<p>gợi ý tên các idol: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus.</p>
 </body>
 </html>
